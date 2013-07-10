@@ -1,10 +1,13 @@
-%h2 Hola! Welcome to Readit!
+%h2 This. Is. Readit.
+
+= link_to "Add a link", new_link_path
 
 %ul
 -@links.each do |link|
 	%li= link_to link.title, link.url
+	= link_to "comments", link
 %br
 
 = will_paginate @links
 
-= link_to "Add a link", new_link_path
+
