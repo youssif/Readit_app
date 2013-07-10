@@ -1,3 +1,10 @@
 %h2 Hola! Welcome to Readit!
 
+%ul
+-@links.each do |link|
+	%li= link_to link.title, link.url
+%br
+
+= will_paginate @links
+
 = link_to "Add a link", new_link_path
